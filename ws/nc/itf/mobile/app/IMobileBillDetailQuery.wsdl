@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+jaxb:version="2.0"
+xmlns:ns0="http://app.mobile.itf.nc/IMobileBillDetailQuery"
+targetNamespace="http://app.mobile.itf.nc/IMobileBillDetailQuery">
+
+<jaxws:bindings>
+	<jaxws:package name="nc.itf.mobile.app"/>
+</jaxws:bindings>
+
+<wsdl:types>
+   <xsd:schema xmlns:ns="http://app.mobile.itf.nc/IMobileBillDetailQuery"
+			xmlns:taskMetaData="http://mobileapp.pf.vo.nc/TaskMetaData"
+			xmlns:businessException="http://pub.vo.nc/BusinessException"
+			attributeFormDefault="unqualified"
+			elementFormDefault="unqualified"
+			targetNamespace="http://app.mobile.itf.nc/IMobileBillDetailQuery" jaxb:version="2.0">
+	<xsd:annotation>
+    	<xsd:appinfo>
+   			<jaxb:schemaBindings>
+    			<jaxb:package name="nc.itf.mobile.app"/>
+    		</jaxb:schemaBindings>
+   		</xsd:appinfo>
+   	</xsd:annotation>
+	 <xsd:import namespace="http://mobileapp.pf.vo.nc/TaskMetaData" schemaLocation="/nc/vo/pf/mobileapp/TaskMetaData.xsd"/>
+	 <xsd:import namespace="http://pub.vo.nc/BusinessException" schemaLocation="/nc/vo/pub/BusinessException.xsd"/>
+	<xsd:element name="getTemplateID">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getTemplateIDResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMobileBillDetail">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="taskMetaData"  minOccurs="0" nillable="true" type="taskMetaData:TaskMetaData"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string2"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string3"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string4"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMobileBillDetailResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return" maxOccurs="unbounded" minOccurs="0" nillable="true">
+					<xsd:complexType>
+						<xsd:sequence>
+							  <xsd:element name="key" maxOccurs="1" minOccurs="0" nillable="true" type="xsd:string"/>
+							  <xsd:element name="value" maxOccurs="1" minOccurs="0" nillable="true" type="xsd:anyType"/>
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMobileBillDetail">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="boolean"  minOccurs="0" nillable="true" type="xsd:boolean"/>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="stringItem" maxOccurs="unbounded" minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string2"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMobileBillDetailResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return" maxOccurs="unbounded" minOccurs="0" nillable="true" type="xsd:anyType"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+   </xsd:schema>
+</wsdl:types>
+    <wsdl:message name="getTemplateIDRequest">
+        <wsdl:part name="parameters"  element="ns0:getTemplateID"/>
+    </wsdl:message>
+    <wsdl:message name="getTemplateIDResponse">
+        <wsdl:part name="parameters"  element="ns0:getTemplateIDResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessException">
+        <wsdl:part name="BusinessException"  xmlns:businessException="http://pub.vo.nc/BusinessException"  element="businessException:BusinessException"/>
+    </wsdl:message>
+    <wsdl:message name="getMobileBillDetailRequest">
+        <wsdl:part name="parameters"  element="ns0:getMobileBillDetail"/>
+    </wsdl:message>
+    <wsdl:message name="getMobileBillDetailResponse">
+        <wsdl:part name="parameters"  element="ns0:getMobileBillDetailResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessException">
+        <wsdl:part name="BusinessException"  xmlns:businessException="http://pub.vo.nc/BusinessException"  element="businessException:BusinessException"/>
+    </wsdl:message>
+    <wsdl:message name="getMobileBillDetailRequest">
+        <wsdl:part name="parameters"  element="ns0:getMobileBillDetail"/>
+    </wsdl:message>
+    <wsdl:message name="getMobileBillDetailResponse">
+        <wsdl:part name="parameters"  element="ns0:getMobileBillDetailResponse"/>
+    </wsdl:message>
+    <wsdl:message name="BusinessException">
+        <wsdl:part name="BusinessException"  xmlns:businessException="http://pub.vo.nc/BusinessException"  element="businessException:BusinessException"/>
+    </wsdl:message>
+
+    <wsdl:portType name="IMobileBillDetailQueryPortType">
+        <wsdl:operation name="getTemplateID">
+            <wsdl:input message="ns0:getTemplateIDRequest" wsaw:Action="urn:getTemplateID"/>
+            <wsdl:output message="ns0:getTemplateIDResponse" wsaw:Action="urn:getTemplateIDResponse"/>
+            <wsdl:fault name="BusinessException" message="ns0:BusinessException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMobileBillDetail">
+            <wsdl:input message="ns0:getMobileBillDetailRequest" wsaw:Action="urn:getMobileBillDetail"/>
+            <wsdl:output message="ns0:getMobileBillDetailResponse" wsaw:Action="urn:getMobileBillDetailResponse"/>
+            <wsdl:fault name="BusinessException" message="ns0:BusinessException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMobileBillDetail">
+            <wsdl:input message="ns0:getMobileBillDetailRequest" wsaw:Action="urn:getMobileBillDetail"/>
+            <wsdl:output message="ns0:getMobileBillDetailResponse" wsaw:Action="urn:getMobileBillDetailResponse"/>
+            <wsdl:fault name="BusinessException" message="ns0:BusinessException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    
+    <wsdl:binding name="IMobileBillDetailQuerySOAP11Binding" type="ns0:IMobileBillDetailQueryPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getTemplateID">
+            <soap:operation soapAction="urn:getTemplateID" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+     		<wsdl:fault name="BusinessException">
+        		<soap:fault name="BusinessException" use="literal"/>
+      		</wsdl:fault>
+
+        </wsdl:operation>
+        <wsdl:operation name="getMobileBillDetail">
+            <soap:operation soapAction="urn:getMobileBillDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+     		<wsdl:fault name="BusinessException">
+        		<soap:fault name="BusinessException" use="literal"/>
+      		</wsdl:fault>
+
+        </wsdl:operation>
+        <wsdl:operation name="getMobileBillDetail">
+            <soap:operation soapAction="urn:getMobileBillDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+     		<wsdl:fault name="BusinessException">
+        		<soap:fault name="BusinessException" use="literal"/>
+      		</wsdl:fault>
+
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IMobileBillDetailQuery">
+        <wsdl:port name="IMobileBillDetailQuerySOAP11port_http" binding="ns0:IMobileBillDetailQuerySOAP11Binding">
+            <soap:address location="http://localhost/uapws/service/IMobileBillDetailQuery"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

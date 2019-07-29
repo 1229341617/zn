@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module>
+	<public>
+		<component name="MobileApproveServlet" accessProtected="false" remote="false"
+			singleton="true" tx="NONE">
+			<implementation>nc.jzmobile.bs.servlet.NCMobileServlet</implementation>
+		</component>
+		<component name="MobileBillServlet" accessProtected="false" remote="false"
+			singleton="true" tx="NONE">
+			<implementation>nc.jzmobile.bs.servlet.NCMobileBillServlet</implementation>
+		</component>
+		<component singleton="true" remote="true" tx="CMT">
+      		<interface>nc.itf.mobile.app.IMobileBillDetailQuery</interface>
+      		<implementation>nc.jzmobile.app.impl.MobileBillDetailQueryImpl</implementation>
+    	</component>
+    	<component singleton="true" remote="true" tx="CMT">
+      		<interface>nc.itf.mobile.app.IMobilebillExecute</interface>
+      		<implementation>nc.jzmobile.app.impl.MobilebillExecuteImpl</implementation>
+    	</component>
+    	<component singleton="true" remote="true" tx="CMT">
+      		<interface>nc.itf.jzmobile.IPFWorkflowQuery</interface>
+      		<implementation>nc.jzmobile.app.impl.PFWorkflowQueryImpl</implementation>
+    	</component>
+	</public>
+	<private>
+	</private>
+</module>

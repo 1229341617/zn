@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<module>
+	<public>
+		<component singleton="true" remote="true" tx="CMT">
+      		<interface>nc.itf.uap.pf.IPFMobileAppService</interface>
+      		<implementation>nc.impl.uap.pf.PFMobileAppServiceImpl</implementation>
+    	</component>
+    	<component singleton="true" remote="true" tx="CMT">
+      		<interface>nc.itf.uap.pf.IMobileTaskService</interface>
+      		<implementation>nc.impl.uap.pf.MobileTaskServiceImpl</implementation>
+    	</component>
+	</public>
+	<private>
+	</private>
+</module>

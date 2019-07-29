@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
+              <span class="suite-name border-passed">Default suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
+                    <span>C:\Users\12293\AppData\Local\Temp\testng-eclipse-2001743469\testng-customsuite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">0 methods,   </span>
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Default_suite" class="panel Default_suite">
+        </div> <!-- panel Default_suite -->
+        <div panel-name="test-xml-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\12293\AppData\Local\Temp\testng-eclipse-2001743469\testng-customsuite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Default suite&quot;&gt;
+  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.JZMobileAppUtils&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.SubContDefaultRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.BaseTreeGrid&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.StrUtil&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.GetDefaultListDataHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.GetBillDataHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.BatchSaveBillHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.app.impl.HelloWorldQueryImpl&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.TermTypeOrgRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzpm.jzcm.settle.AggCmSettleVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.ContractStatus&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.InvOpenRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetTaskUserListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pub.jzpm.budgetctrl.BudgetCtrlException&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.CmContractRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.DealTaskHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.FilterConditionUtil&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.strategy.BillItemRefStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.BillSubmitHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.consts.NCMobileConsts&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.app.impl.MobilebillExecuteImpl&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.BeanUtils&quot;/&gt;
+      &lt;class name=&quot;nc.impl.uap.pf.WorkflowAdminImpl&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.BillTypeModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.JzoblRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.ContDefaultRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.AddrDocRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.NCBillTemplate&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.strategy.BillItemUserDefStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.ResultConsts&quot;/&gt;
+      &lt;class name=&quot;nc.impl.uap.pf.PFMobileAppServiceImpl&quot;/&gt;
+      &lt;class name=&quot;nc.itf.uap.pf.IPFMobileAppService&quot;/&gt;
+      &lt;class name=&quot;zn.test&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzpm.jzcm.contract.CmContractAggVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.util.BillTempletUtil&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.mobile.NCMobileFormulaFacade&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.MobileTabContentVO&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.template.comparator.BillTempletBodyVOComparator&quot;/&gt;
+      &lt;class name=&quot;nc.vo.approve.ActivityVo&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.consts.IBillDataConst&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.FilterModel&quot;/&gt;
+      &lt;class name=&quot;nc.itf.uap.pf.IMobileTaskService&quot;/&gt;
+      &lt;class name=&quot;nc.itf.jzmobile.IJZMobileDMO&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.strategy.BillItemStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetTaskListCountHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.EditSaveBillHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.MobileBillData&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.AssignableUserGroup&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.SendMessageWarnHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.TreeUtils&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetApproveHistoryHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.util.BillMetaUtil&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.strategy.ValueParserStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetUserHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.PubBillTempletTModel&quot;/&gt;
+      &lt;class name=&quot;nc.itf.uap.pf.IPFWorkflowQry&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pf.mobileapp.query.AbstractSubmittedQuery&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetRefDataHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetUserListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.TitleDefUtil&quot;/&gt;
+      &lt;class name=&quot;nc.impl.uap.pf.PFWorkflowQryImpl&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzpm.jzpp05.ApproveAggVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetTasksMakerAndOrgHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bs.servlet.NCMobileBillServlet&quot;/&gt;
+      &lt;class name=&quot;nc.bs.pub.pf.ApproveTools4MABmCtrl&quot;/&gt;
+      &lt;class name=&quot;nc.itf.mobile.app.IMobileBillDetailQuery&quot;/&gt;
+      &lt;class name=&quot;nc.bs.pub.pf.MobileApproveTools&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pf.mobileapp.query.AbstractReceivedQuery&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.JZMNGHolidayTypeListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.itf.mobile.app.IMobilebillExecute&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.MobilePropModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.MobileMessageUtil&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.template.MobileSuperVO&quot;/&gt;
+      &lt;class name=&quot;nc.itf.mobile.app.IHelloWorldQuery&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.PubBillTempletModel&quot;/&gt;
+      &lt;class name=&quot;nc.itf.jzmobile.template.strategy.IBillItemStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.MobileBillTypePropertiesLoader&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetWorkflowHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.JZMNGBillSaveAndSubmitHandler&quot;/&gt;
+      &lt;class name=&quot;nc.mobile.app.impl.JZMobileDMOService&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.PubBillTempletBModel&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetBillFileListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetTaskListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetApproveBillNumHandler&quot;/&gt;
+      &lt;class name=&quot;nc.bs.pub.pf.plugin.PFActivityMsgExecutor&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bs.servlet.NCSysApiServlet&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.BillSaveHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.template.comparator.BillTabVOComparator&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetEditPropertiesHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.INCMobileServletHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.GetRefHandler&quot;/&gt;
+      &lt;class name=&quot;nc.impl.uap.pf.MobileTaskServiceImpl&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.GetBillTempletHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.GetEditProperties&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.NCLoginCheckHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pf.mobileapp.query.PaginationQueryFacade&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetApproveOptHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetFileContentHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.Result&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.template.MobileTemplateVO&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.template.MobileTemplateBVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.NCBillAccessBillTemplate&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.BDFeeItemRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pf.mobileapp.TaskMetaData&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.app.impl.PFWorkflowQueryImpl&quot;/&gt;
+      &lt;class name=&quot;nc.itf.jzmobile.IPFWorkflowQuery&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.AssignableUserVO&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.MobileTabDataVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.ChangePasswordHandler&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pf.mobileapp.MobileAppUtils&quot;/&gt;
+      &lt;class name=&quot;nc.bs.jzmobile.template.strategy.BillItemComboStrategy&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzmobile.app.BillAssignUserVO&quot;/&gt;
+      &lt;class name=&quot;nc.mobile.vo.AttachmentVO&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzinv.jzinv1003.InvReceivecollBVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bs.servlet.NCMobileServlet&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.app.impl.MobileBillDetailQueryImpl&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.refmodel.ExpsetRefModel&quot;/&gt;
+      &lt;class name=&quot;nc.vo.jzpm.jzsub10.AggSubContractVO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.handler.GetDataListHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.BillTypeModelTrans&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.data.access.NCBillTemplateItem&quot;/&gt;
+      &lt;class name=&quot;nc.vo.pub.jzpm.budgetctrl.BudgetCtrlUserObject&quot;/&gt;
+      &lt;class name=&quot;nc.bs.pub.taskmanager.WfTaskManager&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.handler.GetTaskHandler&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.bill.util.RefModelUtil&quot;/&gt;
+      &lt;class name=&quot;nc.mobile.app.impl.AbstractJZMobileDMO&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.consts.MessageTypeConst&quot;/&gt;
+      &lt;class name=&quot;nc.itf.jzmobile.cache.PooledMapCache&quot;/&gt;
+      &lt;class name=&quot;nc.jzmobile.utils.MobilePropertiesLoader&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Default test --&gt;
+&lt;/suite&gt; &lt;!-- Default suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Default test (129 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Default_suite');
+function tableData_Default_suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+return data;
+}
+              </script>
+              <div id="times-div-Default_suite">
+              </div> <!-- times-div-Default_suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Default suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Default_suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

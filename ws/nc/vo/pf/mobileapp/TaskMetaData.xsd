@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<xsd:schema  elementFormDefault="unqualified"  attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+ jaxb:version="2.0"
+xmlns:ns0="http://mobileapp.pf.vo.nc/TaskMetaData"
+targetNamespace="http://mobileapp.pf.vo.nc/TaskMetaData" >
+	<xsd:annotation>
+        <xsd:appinfo>
+            <jaxb:schemaBindings>
+                <jaxb:package name="nc.vo.pf.mobileapp"/>
+            </jaxb:schemaBindings>
+        </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:element name="TaskMetaData" type="ns0:TaskMetaData"/>
+
+    <xsd:complexType name="TaskMetaData"  >
+                <xsd:sequence>
+                    <xsd:element name="pk_checkflow"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="billType"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="startDate"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="title"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="pk_wf_instance"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="billNo"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="sendmanid"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="billId"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="cuserid"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xsd:schema  elementFormDefault="unqualified"  attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:nclang="http://ws.uap.nc/lang"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+ jaxb:version="2.0"
+xmlns:ns0="http://pub.vo.nc/BusinessException"
+targetNamespace="http://pub.vo.nc/BusinessException" >
+	<xsd:annotation>
+        <xsd:appinfo>
+            <jaxb:schemaBindings>
+                <jaxb:package name="nc.vo.pub"/>
+            </jaxb:schemaBindings>
+        </xsd:appinfo>
+    </xsd:annotation>
+
+    <xsd:import namespace="http://ws.uap.nc/lang" schemaLocation="/nc/uap/ws/lang.xsd"/>
+    <xsd:element name="BusinessException" type="ns0:BusinessException"/>
+
+    <xsd:complexType name="BusinessException"  >
+		<xsd:complexContent>
+		<xsd:extension base="nclang:Exception">
+                <xsd:sequence>
+                    <xsd:element name="errorCodeString"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                    <xsd:element name="hint"  nillable="true"  minOccurs="0"  type="xsd:string"/>
+                </xsd:sequence>
+		</xsd:extension>
+		</xsd:complexContent>
+    </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="zn/classes" path="zn/src/public"/>
+	<classpathentry kind="src" path="riart/src/private"/>
+	<classpathentry kind="src" path="riart/src/test"/>
+	<classpathentry kind="src" output="zn/classes" path="zn/src/private"/>
+	<classpathentry kind="src" output="zn/classes" path="zn/src/test"/>
+	<classpathentry kind="src" path="ws"/>
+	<classpathentry kind="src" path="riart/src/public"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Ant_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Product_Common_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Middleware_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Framework_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Public_Library">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Client_Library">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Private_Library">
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Module_Lang_Library"/>
+	<classpathentry kind="con" path="com.yonyou.studio.udt.core.container/Generated_EJB"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

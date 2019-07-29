@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+jaxb:version="2.0"
+xmlns:ns0="http://app.mobile.itf.nc/IHelloWorldQuery"
+targetNamespace="http://app.mobile.itf.nc/IHelloWorldQuery">
+
+<jaxws:bindings>
+	<jaxws:package name="nc.itf.mobile.app"/>
+</jaxws:bindings>
+
+<wsdl:types>
+   <xsd:schema xmlns:ns="http://app.mobile.itf.nc/IHelloWorldQuery"
+			attributeFormDefault="unqualified"
+			elementFormDefault="unqualified"
+			targetNamespace="http://app.mobile.itf.nc/IHelloWorldQuery" jaxb:version="2.0">
+	<xsd:annotation>
+    	<xsd:appinfo>
+   			<jaxb:schemaBindings>
+    			<jaxb:package name="nc.itf.mobile.app"/>
+    		</jaxb:schemaBindings>
+   		</xsd:appinfo>
+   	</xsd:annotation>
+	<xsd:element name="helloworld">
+         <xsd:complexType>
+			<xsd:sequence/>
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="helloworldResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+   </xsd:schema>
+</wsdl:types>
+    <wsdl:message name="helloworldRequest">
+        <wsdl:part name="parameters"  element="ns0:helloworld"/>
+    </wsdl:message>
+    <wsdl:message name="helloworldResponse">
+        <wsdl:part name="parameters"  element="ns0:helloworldResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="IHelloWorldQueryPortType">
+        <wsdl:operation name="helloworld">
+            <wsdl:input message="ns0:helloworldRequest" wsaw:Action="urn:helloworld"/>
+            <wsdl:output message="ns0:helloworldResponse" wsaw:Action="urn:helloworldResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    
+    <wsdl:binding name="IHelloWorldQuerySOAP11Binding" type="ns0:IHelloWorldQueryPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="helloworld">
+            <soap:operation soapAction="urn:helloworld" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IHelloWorldQuery">
+        <wsdl:port name="IHelloWorldQuerySOAP11port_http" binding="ns0:IHelloWorldQuerySOAP11Binding">
+            <soap:address location="http://localhost/uapws/service/IHelloWorldQuery"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions
+xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+jaxb:version="2.0"
+xmlns:ns0="http://dingtalk.zn.itf.nc/IDingTalk"
+targetNamespace="http://dingtalk.zn.itf.nc/IDingTalk">
+
+<jaxws:bindings>
+	<jaxws:package name="nc.itf.zn.dingtalk"/>
+</jaxws:bindings>
+
+<wsdl:types>
+   <xsd:schema xmlns:ns="http://dingtalk.zn.itf.nc/IDingTalk"
+			attributeFormDefault="unqualified"
+			elementFormDefault="unqualified"
+			targetNamespace="http://dingtalk.zn.itf.nc/IDingTalk" jaxb:version="2.0">
+	<xsd:annotation>
+    	<xsd:appinfo>
+   			<jaxb:schemaBindings>
+    			<jaxb:package name="nc.itf.zn.dingtalk"/>
+    		</jaxb:schemaBindings>
+   		</xsd:appinfo>
+   	</xsd:annotation>
+	<xsd:element name="getSender">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getSenderResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="judgeIsOABill">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="judgeIsOABillResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="doQueryFile">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="doQueryFileResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyToDoList">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyToDoListResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getSenderdate">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getSenderdateResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getBillDetail">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getBillDetailResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyToDoNum">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyToDoNumResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getFileList">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getFileListResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="showImage">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string2"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="showImageResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getPersonalAmount">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getPersonalAmountResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="processApprove">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string2"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string3"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string4"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string5"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string6"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="processApproveResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getFileContent">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getFileContentResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getApproveHistoryInfo">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getApproveHistoryInfoResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyErpToDoList">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyErpToDoListResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyApplication">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getMyApplicationResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getUnApprovalDetails">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getUnApprovalDetailsResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getErpBillDetail">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+				<xsd:element name="string1"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getErpBillDetailResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getBillTypeNameByBillType">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="string"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+	<xsd:element name="getBillTypeNameByBillTypeResponse">
+         <xsd:complexType>
+            <xsd:sequence>
+				<xsd:element name="return"  minOccurs="0" nillable="true" type="xsd:string"/>
+             </xsd:sequence>  
+         </xsd:complexType>
+     </xsd:element>
+   </xsd:schema>
+</wsdl:types>
+    <wsdl:message name="getSenderRequest">
+        <wsdl:part name="parameters"  element="ns0:getSender"/>
+    </wsdl:message>
+    <wsdl:message name="getSenderResponse">
+        <wsdl:part name="parameters"  element="ns0:getSenderResponse"/>
+    </wsdl:message>
+    <wsdl:message name="judgeIsOABillRequest">
+        <wsdl:part name="parameters"  element="ns0:judgeIsOABill"/>
+    </wsdl:message>
+    <wsdl:message name="judgeIsOABillResponse">
+        <wsdl:part name="parameters"  element="ns0:judgeIsOABillResponse"/>
+    </wsdl:message>
+    <wsdl:message name="doQueryFileRequest">
+        <wsdl:part name="parameters"  element="ns0:doQueryFile"/>
+    </wsdl:message>
+    <wsdl:message name="doQueryFileResponse">
+        <wsdl:part name="parameters"  element="ns0:doQueryFileResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getMyToDoListRequest">
+        <wsdl:part name="parameters"  element="ns0:getMyToDoList"/>
+    </wsdl:message>
+    <wsdl:message name="getMyToDoListResponse">
+        <wsdl:part name="parameters"  element="ns0:getMyToDoListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getSenderdateRequest">
+        <wsdl:part name="parameters"  element="ns0:getSenderdate"/>
+    </wsdl:message>
+    <wsdl:message name="getSenderdateResponse">
+        <wsdl:part name="parameters"  element="ns0:getSenderdateResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getBillDetailRequest">
+        <wsdl:part name="parameters"  element="ns0:getBillDetail"/>
+    </wsdl:message>
+    <wsdl:message name="getBillDetailResponse">
+        <wsdl:part name="parameters"  element="ns0:getBillDetailResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getMyToDoNumRequest">
+        <wsdl:part name="parameters"  element="ns0:getMyToDoNum"/>
+    </wsdl:message>
+    <wsdl:message name="getMyToDoNumResponse">
+        <wsdl:part name="parameters"  element="ns0:getMyToDoNumResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getFileListRequest">
+        <wsdl:part name="parameters"  element="ns0:getFileList"/>
+    </wsdl:message>
+    <wsdl:message name="getFileListResponse">
+        <wsdl:part name="parameters"  element="ns0:getFileListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="showImageRequest">
+        <wsdl:part name="parameters"  element="ns0:showImage"/>
+    </wsdl:message>
+    <wsdl:message name="showImageResponse">
+        <wsdl:part name="parameters"  element="ns0:showImageResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonalAmountRequest">
+        <wsdl:part name="parameters"  element="ns0:getPersonalAmount"/>
+    </wsdl:message>
+    <wsdl:message name="getPersonalAmountResponse">
+        <wsdl:part name="parameters"  element="ns0:getPersonalAmountResponse"/>
+    </wsdl:message>
+    <wsdl:message name="processApproveRequest">
+        <wsdl:part name="parameters"  element="ns0:processApprove"/>
+    </wsdl:message>
+    <wsdl:message name="processApproveResponse">
+        <wsdl:part name="parameters"  element="ns0:processApproveResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getFileContentRequest">
+        <wsdl:part name="parameters"  element="ns0:getFileContent"/>
+    </wsdl:message>
+    <wsdl:message name="getFileContentResponse">
+        <wsdl:part name="parameters"  element="ns0:getFileContentResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getApproveHistoryInfoRequest">
+        <wsdl:part name="parameters"  element="ns0:getApproveHistoryInfo"/>
+    </wsdl:message>
+    <wsdl:message name="getApproveHistoryInfoResponse">
+        <wsdl:part name="parameters"  element="ns0:getApproveHistoryInfoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getMyErpToDoListRequest">
+        <wsdl:part name="parameters"  element="ns0:getMyErpToDoList"/>
+    </wsdl:message>
+    <wsdl:message name="getMyErpToDoListResponse">
+        <wsdl:part name="parameters"  element="ns0:getMyErpToDoListResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getMyApplicationRequest">
+        <wsdl:part name="parameters"  element="ns0:getMyApplication"/>
+    </wsdl:message>
+    <wsdl:message name="getMyApplicationResponse">
+        <wsdl:part name="parameters"  element="ns0:getMyApplicationResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getUnApprovalDetailsRequest">
+        <wsdl:part name="parameters"  element="ns0:getUnApprovalDetails"/>
+    </wsdl:message>
+    <wsdl:message name="getUnApprovalDetailsResponse">
+        <wsdl:part name="parameters"  element="ns0:getUnApprovalDetailsResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getErpBillDetailRequest">
+        <wsdl:part name="parameters"  element="ns0:getErpBillDetail"/>
+    </wsdl:message>
+    <wsdl:message name="getErpBillDetailResponse">
+        <wsdl:part name="parameters"  element="ns0:getErpBillDetailResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getBillTypeNameByBillTypeRequest">
+        <wsdl:part name="parameters"  element="ns0:getBillTypeNameByBillType"/>
+    </wsdl:message>
+    <wsdl:message name="getBillTypeNameByBillTypeResponse">
+        <wsdl:part name="parameters"  element="ns0:getBillTypeNameByBillTypeResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="IDingTalkPortType">
+        <wsdl:operation name="getSender">
+            <wsdl:input message="ns0:getSenderRequest" wsaw:Action="urn:getSender"/>
+            <wsdl:output message="ns0:getSenderResponse" wsaw:Action="urn:getSenderResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="judgeIsOABill">
+            <wsdl:input message="ns0:judgeIsOABillRequest" wsaw:Action="urn:judgeIsOABill"/>
+            <wsdl:output message="ns0:judgeIsOABillResponse" wsaw:Action="urn:judgeIsOABillResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="doQueryFile">
+            <wsdl:input message="ns0:doQueryFileRequest" wsaw:Action="urn:doQueryFile"/>
+            <wsdl:output message="ns0:doQueryFileResponse" wsaw:Action="urn:doQueryFileResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMyToDoList">
+            <wsdl:input message="ns0:getMyToDoListRequest" wsaw:Action="urn:getMyToDoList"/>
+            <wsdl:output message="ns0:getMyToDoListResponse" wsaw:Action="urn:getMyToDoListResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getSenderdate">
+            <wsdl:input message="ns0:getSenderdateRequest" wsaw:Action="urn:getSenderdate"/>
+            <wsdl:output message="ns0:getSenderdateResponse" wsaw:Action="urn:getSenderdateResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getBillDetail">
+            <wsdl:input message="ns0:getBillDetailRequest" wsaw:Action="urn:getBillDetail"/>
+            <wsdl:output message="ns0:getBillDetailResponse" wsaw:Action="urn:getBillDetailResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMyToDoNum">
+            <wsdl:input message="ns0:getMyToDoNumRequest" wsaw:Action="urn:getMyToDoNum"/>
+            <wsdl:output message="ns0:getMyToDoNumResponse" wsaw:Action="urn:getMyToDoNumResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getFileList">
+            <wsdl:input message="ns0:getFileListRequest" wsaw:Action="urn:getFileList"/>
+            <wsdl:output message="ns0:getFileListResponse" wsaw:Action="urn:getFileListResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="showImage">
+            <wsdl:input message="ns0:showImageRequest" wsaw:Action="urn:showImage"/>
+            <wsdl:output message="ns0:showImageResponse" wsaw:Action="urn:showImageResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonalAmount">
+            <wsdl:input message="ns0:getPersonalAmountRequest" wsaw:Action="urn:getPersonalAmount"/>
+            <wsdl:output message="ns0:getPersonalAmountResponse" wsaw:Action="urn:getPersonalAmountResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="processApprove">
+            <wsdl:input message="ns0:processApproveRequest" wsaw:Action="urn:processApprove"/>
+            <wsdl:output message="ns0:processApproveResponse" wsaw:Action="urn:processApproveResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getFileContent">
+            <wsdl:input message="ns0:getFileContentRequest" wsaw:Action="urn:getFileContent"/>
+            <wsdl:output message="ns0:getFileContentResponse" wsaw:Action="urn:getFileContentResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getApproveHistoryInfo">
+            <wsdl:input message="ns0:getApproveHistoryInfoRequest" wsaw:Action="urn:getApproveHistoryInfo"/>
+            <wsdl:output message="ns0:getApproveHistoryInfoResponse" wsaw:Action="urn:getApproveHistoryInfoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMyErpToDoList">
+            <wsdl:input message="ns0:getMyErpToDoListRequest" wsaw:Action="urn:getMyErpToDoList"/>
+            <wsdl:output message="ns0:getMyErpToDoListResponse" wsaw:Action="urn:getMyErpToDoListResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getMyApplication">
+            <wsdl:input message="ns0:getMyApplicationRequest" wsaw:Action="urn:getMyApplication"/>
+            <wsdl:output message="ns0:getMyApplicationResponse" wsaw:Action="urn:getMyApplicationResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getUnApprovalDetails">
+            <wsdl:input message="ns0:getUnApprovalDetailsRequest" wsaw:Action="urn:getUnApprovalDetails"/>
+            <wsdl:output message="ns0:getUnApprovalDetailsResponse" wsaw:Action="urn:getUnApprovalDetailsResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getErpBillDetail">
+            <wsdl:input message="ns0:getErpBillDetailRequest" wsaw:Action="urn:getErpBillDetail"/>
+            <wsdl:output message="ns0:getErpBillDetailResponse" wsaw:Action="urn:getErpBillDetailResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getBillTypeNameByBillType">
+            <wsdl:input message="ns0:getBillTypeNameByBillTypeRequest" wsaw:Action="urn:getBillTypeNameByBillType"/>
+            <wsdl:output message="ns0:getBillTypeNameByBillTypeResponse" wsaw:Action="urn:getBillTypeNameByBillTypeResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    
+    <wsdl:binding name="IDingTalkSOAP11Binding" type="ns0:IDingTalkPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="getSender">
+            <soap:operation soapAction="urn:getSender" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="judgeIsOABill">
+            <soap:operation soapAction="urn:judgeIsOABill" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="doQueryFile">
+            <soap:operation soapAction="urn:doQueryFile" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyToDoList">
+            <soap:operation soapAction="urn:getMyToDoList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getSenderdate">
+            <soap:operation soapAction="urn:getSenderdate" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getBillDetail">
+            <soap:operation soapAction="urn:getBillDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyToDoNum">
+            <soap:operation soapAction="urn:getMyToDoNum" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getFileList">
+            <soap:operation soapAction="urn:getFileList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="showImage">
+            <soap:operation soapAction="urn:showImage" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPersonalAmount">
+            <soap:operation soapAction="urn:getPersonalAmount" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="processApprove">
+            <soap:operation soapAction="urn:processApprove" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getFileContent">
+            <soap:operation soapAction="urn:getFileContent" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getApproveHistoryInfo">
+            <soap:operation soapAction="urn:getApproveHistoryInfo" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyErpToDoList">
+            <soap:operation soapAction="urn:getMyErpToDoList" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyApplication">
+            <soap:operation soapAction="urn:getMyApplication" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getUnApprovalDetails">
+            <soap:operation soapAction="urn:getUnApprovalDetails" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getErpBillDetail">
+            <soap:operation soapAction="urn:getErpBillDetail" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getBillTypeNameByBillType">
+            <soap:operation soapAction="urn:getBillTypeNameByBillType" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IDingTalk">
+        <wsdl:port name="IDingTalkSOAP11port_http" binding="ns0:IDingTalkSOAP11Binding">
+            <soap:address location="http://localhost/uapws/service/IDingTalk"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
